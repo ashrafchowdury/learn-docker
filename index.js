@@ -7,4 +7,4 @@ app.get("/", (req, res) => {
   return res.json({ message: "Hello from nodeJS docker container" });
 });
 
-app.listen(PORT, () => console.log("Node server is running!"));
+app.listen(PORT, () => console.log("Node server is running"));
