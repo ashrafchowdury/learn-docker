@@ -1,0 +1,6 @@
+node_modules
+public
+
+README.md
+.gitignore
+eslint.config.js

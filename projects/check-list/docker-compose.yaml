@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  forntend:
+    build: ./interface
+    ports:
+      - 3000:3000
+  backend:
+    build: ./server
+    environment:
+       POSTGRES_USER: username
+       POSTGRES_PASSWORD: password
+       POSTGRES_DB: check_list
+    ports:
+      - 5000:5000
+  database:
+    image: postgres:16.2
+    ports:
+      - 5432:5432
+    volumes:
+      - check_list:/var/lib/postgresql/data/
+volumes:
+  check_list:
